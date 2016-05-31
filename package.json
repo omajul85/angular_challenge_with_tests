@@ -1,0 +1,22 @@
+{
+  "name": "angular_challenge_with_tests",
+  "version": "1.0.0",
+  "description": "Create a to do list app in AngularJS using TDD approach",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omajul85/angular_challenge_with_tests.git"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "Omar Alvarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omajul85/angular_challenge_with_tests/issues"
+  },
+  "homepage": "https://github.com/omajul85/angular_challenge_with_tests#readme"
+}
