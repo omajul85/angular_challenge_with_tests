@@ -4,7 +4,9 @@
   "description": "Create a to do list app in AngularJS using TDD approach",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd app && ../node_modules/http-server/bin/http-server",
+    "webdriver-manager": "./node_modules/protractor/bin/webdriver-manager",
+    "protractor": "./node_modules/protractor/bin/protractor"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/omajul85/angular_challenge_with_tests/issues"
   },
-  "homepage": "https://github.com/omajul85/angular_challenge_with_tests#readme"
+  "homepage": "https://github.com/omajul85/angular_challenge_with_tests#readme",
+  "dependencies": {
+    "http-server": "^0.9.0",
+    "protractor": "^3.3.0"
+  }
 }
