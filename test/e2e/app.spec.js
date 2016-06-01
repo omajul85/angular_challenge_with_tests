@@ -1,19 +1,14 @@
-// describe("app", function() {
-//   it("should get home page title", function() {
-//     browser.get('/');
-//     expect(browser.getTitle()).toEqual("Todos App");
-//   });
-
-//   it("should say 'Hello world' on the page", function() {
-//     browser.get('/');
-//     expect($$("p").first().getText()).toEqual("Hello world");
-//   });
-// });
-
 describe('Todos tracker', function() {
-  it('has a todo', function() {
-    browser.get('/');
-    var todo = $('#todo');
-    expect(todo.getText()).toEqual('ToDo1');
+  // it('has a todo', function() {
+  //   browser.get('/');
+  //   var todo = $('#todo');
+  //   expect(todo.getText()).toEqual('ToDo1');
+  // });
+
+  it('has severals todos', function(){
+  	browser.get('/');
+  	var todos = $$('#todos p');
+  	expect(todos.first().getText()).toEqual('ToDo1: completed');
+  	expect(todos.last().getText()).toEqual('ToDo2: not completed');
   });
 });

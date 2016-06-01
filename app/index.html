@@ -8,8 +8,10 @@
     <title>Todos App</title>
   </head>
   <body>
-  <div id="todo" ng-controller="toDoController as controller">
-      {{ controller.todo }}
+  <div id="todos" ng-controller="toDoController as controller">
+      <p ng-repeat="todo in controller.todos">
+        {{ todo.text }}: {{ todo.completed ? "completed" : "not completed"}}
+      </p>
     </div>
   </body>
 </html>
