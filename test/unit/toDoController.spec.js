@@ -1,19 +1,19 @@
 describe('toDoController', function() {
-  
+
   beforeEach(module('toDoApp'));
 
   var ctrl;
+  var toDoFactory;
 
-  /*inject is a built-in Angular function that allows us to access
-  the Angular app and our controller from inside our tests*/
-  beforeEach(inject(function($controller) {
+  beforeEach(inject(function($controller,_toDoFactory_) {
     ctrl = $controller('toDoController');
+    toDoFactory = _toDoFactory_;
   }));
 
   it('initialises with several todos', function() {
   	var todos = [
-  		{text: "ToDo1", completed: true},
-  		{text: "ToDo2", completed: false}
+  		new toDoFactory('ToDo1',true),
+  		new toDoFactory('ToDo2')
   	];
   	expect(ctrl.todos).toEqual(todos);
   });
@@ -28,6 +28,6 @@ describe('toDoController', function() {
   	var todos = ctrl.todos;
   	ctrl.removeToDo();
   	expect(todos.length).toEqual(1);
-  });  
+  });
 
 });
