@@ -12,6 +12,7 @@
   <div id="todos" ng-controller="toDoController as controller">
       <p ng-repeat="todo in controller.todos">
         {{ todo.text }}: {{ todo.completed ? "completed" : "not completed"}}
+        <button class="complete" ng-click="todo.complete();">Complete</button>
       </p>
       <input id="todo_name" type="text" ng-model="task">
       <button id="add_todo" ng-click="controller.addToDo(task)">Add todo</button>
