@@ -1,7 +1,11 @@
-toDoApp.controller('toDoController', ['toDoFactory', function(toDoFactory) {
+toDoApp.controller('toDoController', ['toDoService', 'toDoFactory', function(toDoService, toDoFactory) {
+	
 	var self = this;
 
-	self.todos = [new toDoFactory('ToDo1',true), new toDoFactory('ToDo2')];
+	// Use the toDoService to fetch the list from API
+	toDoService.getAll().then(function(todos){
+		self.todos = todos;
+	});
 
 	self.addToDo = function(task){
 		self.todos.push(new toDoFactory(task));
