@@ -1,11 +1,11 @@
 describe('toDoService', function(){
 
-	beforeEach(module,('toDoApp'));
+	beforeEach(module('toDoApp'));
 
-	var toDoService, toDoFactory, httpBackend;
+	var toDoService, httpBackend;
 	var apiData = [{text: "ToDo1", completed: true}, {text: "ToDo2", completed: false}];
 
-	beforeEach(inject(function($httpBackend, _toDoService_, _toDoFactory_) {
+	beforeEach(inject(function(_toDoService_, _toDoFactory_, $httpBackend) {
 		toDoService = _toDoService_;
     toDoFactory = _toDoFactory_;
     httpBackend = $httpBackend;
